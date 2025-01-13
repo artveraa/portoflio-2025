@@ -1,0 +1,12 @@
+import AnimatedImages from "./AnimatedImages";
+import MainTitle from "./MainTitle";
+
+const Hero = () => {
+  return (
+    <div className="hero h-[100vh] w-full flex flex-col justify-center ">
+      <MainTitle />
+      <AnimatedImages />
+    </div>
+  );
+};
+export default Hero;

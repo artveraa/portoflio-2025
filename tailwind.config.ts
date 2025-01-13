@@ -9,8 +9,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        dark: "var(--dark)",
+        main: "var(--main)",
+      },
+      fontFamily: {
+        anton: "var(--font-anton)",
+        instrument: "var(--font-instrument)",
       },
     },
   },
