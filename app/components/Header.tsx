@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useRef } from "react";
 import Logo from "@/app/components/Logo";
 import Navbar from "@/app/components/Navbar";
 

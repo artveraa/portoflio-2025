@@ -12,11 +12,13 @@ const PreLoader = ({ timeline }: PreLoaderProps) => {
   const letterBRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    timeline &&
+    if (
+      timeline &&
       dashRef.current &&
       letterARef.current &&
       letterBRef.current &&
-      preloaderRef.current &&
+      preloaderRef.current
+    ) {
       timeline.add(
         preloaderAnimations(
           letterARef.current,
@@ -25,6 +27,7 @@ const PreLoader = ({ timeline }: PreLoaderProps) => {
           preloaderRef.current
         )
       );
+    }
   }, [timeline]);
   return (
     <div

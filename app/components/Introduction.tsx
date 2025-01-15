@@ -7,9 +7,9 @@ const Introduction = () => {
   const paragraph = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
-    intro.current &&
-      paragraph.current &&
+    if (intro.current && paragraph.current) {
       introductionAnimations(intro.current, paragraph.current);
+    }
   }, []);
 
   return (
@@ -25,9 +25,9 @@ const Introduction = () => {
         className="font-instrument text-4xl w-[50%] text-center mt-5"
         ref={paragraph}
       >
-        "Durant son passage chez Océbo, Arthur nous a régulièrement prouvé la
-        solidité de ses acquis, mettant en avant rigueur, qualités techniques,
-        organisationnelles et sens du travail en équipe."
+        &quot;Durant son passage chez Océbo, Arthur nous a régulièrement prouvé
+        la solidité de ses acquis, mettant en avant rigueur, qualités
+        techniques, organisationnelles et sens du travail en équipe.&quot;
         <span className="block text-2xl mt-4">Y. Girot, Directeur Général</span>
       </p>
     </div>

@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
 import { Anton, Instrument_Serif } from "next/font/google";
 import "@/app/globals.css";
-import { DarkModeProvider } from "@/app/context/DarkModeContext";
 
 import Header from "@/app/components/Header";
 
 const anton = Anton({
   variable: "--font-anton",
   weight: "400",
+  subsets: ["latin"],
 });
 
 const instrument = Instrument_Serif({
   variable: "--font-instrument",
   weight: "400",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -30,10 +31,8 @@ export default function RootLayout({
       <body
         className={`${anton.variable} ${instrument.variable} antialiased light:bg-light light:text-dark`}
       >
-        <DarkModeProvider>
-          <Header />
-          {children}
-        </DarkModeProvider>
+        <Header />
+        {children}
       </body>
     </html>
   );

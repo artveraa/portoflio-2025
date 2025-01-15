@@ -1,8 +1,6 @@
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
 import { ScrollTrigger } from "gsap/all";
-import { useContext } from "react";
-import { DarkModeContext } from "@/app/context/DarkModeContext";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 

@@ -1,5 +1,4 @@
-import { useContext, useEffect, useRef } from "react";
-import { DarkModeContext } from "@/app/context/DarkModeContext";
+import { useEffect, useRef } from "react";
 import { presentationAnimation } from "@/app/lib/animations";
 
 const Presentation = () => {

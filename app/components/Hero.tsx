@@ -1,4 +1,3 @@
-import AnimatedImages from "./AnimatedImages";
 import MainTitle from "./MainTitle";
 
 const Hero = () => {

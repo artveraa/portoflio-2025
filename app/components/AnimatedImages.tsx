@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { imagesAnimations } from "@/app/lib/animations";
 
 const AnimatedImages = () => {
@@ -19,8 +19,10 @@ const AnimatedImages = () => {
   }, []);
 
   useEffect(() => {
-    images && image2 && image3 && imagesAnimations(images, image2, image3);
-  }, [images]);
+    if (images && image2 && image3) {
+      imagesAnimations(images, image2, image3);
+    }
+  }, [images, image2, image3]);
 
   return (
     <div className="images-wrapper relative w-full h-[50vh] flex justify-center items-center ">
