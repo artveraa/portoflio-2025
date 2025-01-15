@@ -13,7 +13,7 @@ const Introduction = () => {
   }, []);
 
   return (
-    <div className="h-[100vh] w-full  flex justify-center items-center flex-col">
+    <div className="h-[80vh] w-full  flex justify-center items-center flex-col">
       <h2
         className="font-anton text-[10vw] uppercase flex flex-col leading-none text-center"
         ref={intro}

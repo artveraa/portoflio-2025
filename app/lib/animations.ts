@@ -158,7 +158,7 @@ export const imagesAnimations = (
   });
 
   tl.to(mainImage, {
-    scale: 0.9,
+    scale: 0.7,
     duration: 1,
     ease: "power4.out",
   })
@@ -166,9 +166,9 @@ export const imagesAnimations = (
       image2,
       {
         x: "50%",
-        rotate: 10,
+        rotate: 20,
         duration: 0.5,
-        scale: 0.7,
+        scale: 0.5,
         autoAlpha: 1,
         ease: "power4.out",
       },
@@ -180,7 +180,7 @@ export const imagesAnimations = (
         x: "-50%",
         rotate: -10,
         duration: 0.5,
-        scale: 0.7,
+        scale: 0.5,
         autoAlpha: 1,
         ease: "power4.out",
       },
@@ -202,8 +202,8 @@ export const introductionAnimations = (
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: title,
-      start: "top center",
-      end: "bottom center",
+      start: "top 70%",
+      end: "bottom 70%",
       scrub: false,
       // markers: true,
       toggleActions: "play none reverse none",
@@ -249,8 +249,8 @@ export const presentationAnimation = (element: HTMLDivElement) => {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: element,
-      start: "top center",
-      end: "bottom center",
+      start: "top 70%",
+      end: "bottom 70%",
       scrub: false,
     },
   });

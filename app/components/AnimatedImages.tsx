@@ -25,13 +25,13 @@ const AnimatedImages = () => {
   }, [images, image2, image3]);
 
   return (
-    <div className="images-wrapper relative w-full h-[50vh] flex justify-center items-center ">
+    <div className="images-wrapper relative w-full h-[30vh] flex justify-center items-center ">
       <Image
         src="/arthurvera.jpg"
         alt="Arthur Vera"
         width={918}
         height={928}
-        className="z-10  border-[7px] border-b-[55px] border-light w-[30%] translate-y-[-50%] opacity-0"
+        className="z-10  border-[7px] border-b-[55px] border-light w-[30%] translate-y-[-35%] opacity-0"
       />
 
       <Image
@@ -39,7 +39,7 @@ const AnimatedImages = () => {
         alt="Arthur Vera"
         width={918}
         height={928}
-        className="-z-1 absolute opacity-0"
+        className="-z-1 absolute opacity-0 border-[7px] border-b-[55px] border-light w-[30%] translate-y-[-60%]"
       />
 
       <Image
@@ -47,7 +47,7 @@ const AnimatedImages = () => {
         alt="Arthur Vera"
         width={918}
         height={928}
-        className="-z-1 absolute opacity-0"
+        className="-z-1 absolute opacity-0 border-[7px] border-b-[55px] border-light w-[30%] translate-y-[-40%]"
       />
     </div>
   );

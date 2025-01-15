@@ -15,6 +15,7 @@ export default {
       fontFamily: {
         anton: "var(--font-anton)",
         instrument: "var(--font-instrument)",
+        inter: "var(--font-inter)",
       },
     },
   },
