@@ -10,12 +10,12 @@
   --foreground: var(--main);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: var(--light);
     --foreground: var(--dark);
   }
-}
+} */
 
 body {
   font-family: var(--font-inter), sans-serif;
