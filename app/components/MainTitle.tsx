@@ -1,17 +1,31 @@
-"use client";
-import { useEffect, useRef } from "react";
-import { heroAnimations } from "@/app/lib/animations";
+import { useRef, useEffect, useState } from "react";
+import { heroTitleAnimations } from "@/app/lib/animations";
 
 const MainTitle = () => {
   const title1 = useRef<HTMLSpanElement>(null);
   const dash = useRef<HTMLSpanElement>(null);
   const title2 = useRef<HTMLSpanElement>(null);
+  const [header, setHeader] = useState<HTMLDivElement | null>(null);
+  const [images, setImages] = useState<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (title1.current && dash.current && title2.current) {
-      heroAnimations(title1.current, dash.current, title2.current);
+    if (typeof window !== "undefined") {
+      setHeader(document.querySelector<HTMLDivElement>(".header"));
+      setImages(document.querySelector<HTMLDivElement>(".images-wrapper"));
     }
   }, []);
+
+  useEffect(() => {
+    if (title1.current && dash.current && title2.current && header && images) {
+      heroTitleAnimations(
+        title1.current,
+        dash.current,
+        title2.current,
+        header,
+        images
+      );
+    }
+  }, [images, header]);
 
   return (
     <h1 className="font-anton uppercase flex flex-col justify-center items-center">
@@ -33,4 +47,5 @@ const MainTitle = () => {
     </h1>
   );
 };
+
 export default MainTitle;

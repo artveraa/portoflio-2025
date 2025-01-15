@@ -1,10 +1,14 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import Logo from "@/app/components/Logo";
+import Navbar from "@/app/components/Navbar";
 
 const Header = () => {
   return (
-    <div className="fixed flex justify-between items-center w-full p-5">
+    <div className="header fixed flex justify-between items-center w-full p-5 translate-y-[-100%] opacity-0">
       <Logo />
-      <div className="w-3 aspect-square rounded-full bg-main shrink-0"></div>
+      <Navbar />
     </div>
   );
 };

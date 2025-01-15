@@ -7,16 +7,28 @@
   --main: #d9f004;
   --light: #f3f3f3;
   --background: var(--dark);
+  --foreground: var(--main);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --background: var(--dark);
+    --background: var(--light);
+    --foreground: var(--dark);
   }
-}
+}*/
 
 body {
-  color: var(--main);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html.light {
+  background-color: var(--main);
+  color: var(--dark);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+html.dark {
+  background-color: var(--dark);
+  color: var(--main);
+  transition: background-color 0.5s, color 0.5s;
 }

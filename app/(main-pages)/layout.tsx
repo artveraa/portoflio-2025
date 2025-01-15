@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Anton, Instrument_Serif } from "next/font/google";
 import "@/app/globals.css";
+import { DarkModeProvider } from "@/app/context/DarkModeContext";
+
 import Header from "@/app/components/Header";
 
 const anton = Anton({
@@ -24,10 +26,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${anton.variable} ${instrument.variable} antialiased`}>
-        <Header />
-        {children}
+    <html lang="fr">
+      <body
+        className={`${anton.variable} ${instrument.variable} antialiased light:bg-light light:text-dark`}
+      >
+        <DarkModeProvider>
+          <Header />
+          {children}
+        </DarkModeProvider>
       </body>
     </html>
   );
