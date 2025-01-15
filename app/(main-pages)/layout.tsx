@@ -28,9 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body
-        className={`${anton.variable} ${instrument.variable} antialiased light:bg-light light:text-dark`}
-      >
+      <body className={`${anton.variable} ${instrument.variable} antialiased `}>
         <Header />
         {children}
       </body>
