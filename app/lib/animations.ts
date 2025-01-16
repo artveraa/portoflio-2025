@@ -68,48 +68,34 @@ export const preloaderAnimations = (
 // Hero animations
 
 export const heroTitleAnimations = (
-  title1: HTMLSpanElement,
+  title: HTMLSpanElement,
   dash: HTMLSpanElement,
-  title2: HTMLSpanElement,
   header: HTMLDivElement,
   images: HTMLDivElement
 ) => {
-  const title1Split = new SplitText(title1, { type: "chars" });
-  const title2Split = new SplitText(title2, { type: "chars" });
+  const titleSplit = new SplitText(title, { type: "chars" });
   const mainImage = images.querySelectorAll("img")[0];
 
   const tl = gsap.timeline();
 
-  tl.from(
-    title1Split.chars,
+  tl.fromTo(
+    titleSplit.chars,
+    {
+      y: 100,
+    },
     {
       duration: 1.5,
-      y: 100,
-      // rotationZ: 10,
-      opacity: 0,
+      y: 0,
+      // rotationZ: 0,
+
       stagger: {
         each: 0.02,
-        from: "random",
+        // from: "random",
       },
       ease: "power4.out",
     },
     "<"
   )
-    .from(
-      title2Split.chars,
-      {
-        duration: 1.5,
-        y: 100,
-        // rotationZ: 10,
-        opacity: 0,
-        stagger: {
-          each: 0.02,
-          from: "random",
-        },
-        ease: "power4.out",
-      },
-      "<"
-    )
     .fromTo(
       dash,
       { scaleX: 0 },
@@ -273,4 +259,70 @@ export const presentationAnimation = (element: HTMLDivElement) => {
       ease: "power4.out",
     }
   );
+};
+
+// Footer animations
+
+export const footerAnimation = (
+  footer: HTMLDivElement,
+  listItems: HTMLUListElement[],
+  name: HTMLHeadingElement,
+  button: HTMLDivElement
+) => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: footer,
+      start: "top center",
+      end: "bottom center",
+      scrub: false,
+      // markers: true,
+    },
+  });
+
+  tl.fromTo(
+    listItems,
+    {
+      opacity: 0,
+      y: 50,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      stagger: {
+        each: 0.02,
+        from: "random",
+      },
+      ease: "power4.out",
+    }
+  )
+    .fromTo(
+      name,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+
+        ease: "power4.out",
+      },
+      "<"
+    )
+    .fromTo(
+      button,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power4.out",
+      },
+      "<"
+    );
 };

@@ -13,9 +13,9 @@ const Presentation = () => {
   return (
     <div
       ref={presentationRef}
-      className="presentation-section h-[100vh] w-full flex justify-center items-center flex-col p-5"
+      className="presentation-section md:h-[100vh] w-full flex justify-center items-center flex-col p-5"
     >
-      <p className="text-[120px] text-left font-instrument uppercase leading-[1.2]">
+      <p className="text-6xl md:text-[120px] text-left font-instrument uppercase leading-[1.2]">
         Je combine stratégie, créativité et technologie pour créer des
         expériences uniques qui font la différence.
       </p>

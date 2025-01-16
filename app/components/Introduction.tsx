@@ -15,20 +15,22 @@ const Introduction = () => {
   return (
     <div className="h-[80vh] w-full  flex justify-center items-center flex-col">
       <h2
-        className="font-anton text-[10vw] uppercase flex flex-col leading-none text-center"
+        className="font-anton text-[20vw] md:text-[10vw] uppercase flex flex-col leading-none text-center"
         ref={intro}
       >
         <span className="block">front-end</span>
         <span>developer</span>
       </h2>
       <p
-        className="font-instrument text-4xl w-[50%] text-center mt-5"
+        className="font-instrument text-lg md:text-4xl w-[80%] md:w-[50%] text-center mt-5"
         ref={paragraph}
       >
         &quot;Durant son passage chez Océbo, Arthur nous a régulièrement prouvé
         la solidité de ses acquis, mettant en avant rigueur, qualités
         techniques, organisationnelles et sens du travail en équipe.&quot;
-        <span className="block text-2xl mt-4">Y. Girot, Directeur Général</span>
+        <span className="block text-md md:text-2xl mt-4">
+          Y. Girot, Directeur Général
+        </span>
       </p>
     </div>
   );

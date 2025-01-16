@@ -18,6 +18,15 @@ export default {
         instrument: "var(--font-instrument)",
         inter: "var(--font-inter)",
       },
+      keyframes: {
+        handShake: {
+          "0%, 100%": { transform: "rotate(0deg)" },
+          "50%": { transform: "rotate(10deg)" },
+        },
+      },
+      animation: {
+        handShake: "handShake 1s ease-in-out infinite",
+      },
     },
   },
   plugins: [],

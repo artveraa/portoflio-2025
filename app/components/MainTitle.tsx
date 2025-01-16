@@ -2,9 +2,8 @@ import { useRef, useEffect, useState } from "react";
 import { heroTitleAnimations } from "@/app/lib/animations";
 
 const MainTitle = () => {
-  const title1 = useRef<HTMLSpanElement>(null);
+  const title = useRef<HTMLHeadingElement | null>(null);
   const dash = useRef<HTMLSpanElement>(null);
-  const title2 = useRef<HTMLSpanElement>(null);
   const [header, setHeader] = useState<HTMLDivElement | null>(null);
   const [images, setImages] = useState<HTMLDivElement | null>(null);
 
@@ -16,31 +15,25 @@ const MainTitle = () => {
   }, []);
 
   useEffect(() => {
-    if (title1.current && dash.current && title2.current && header && images) {
-      heroTitleAnimations(
-        title1.current,
-        dash.current,
-        title2.current,
-        header,
-        images
-      );
+    if (title.current && dash.current && header && images) {
+      heroTitleAnimations(title.current, dash.current, header, images);
     }
   }, [images, header]);
 
   return (
-    <h1 className="font-anton uppercase flex flex-col justify-center items-center">
-      <span className="text-[17vw] leading-none overflow-hidden" ref={title1}>
+    <h1
+      className="text-[25vw] md:text-[17vw] font-anton uppercase flex flex-col justify-center items-center will-change-transform"
+      ref={title}
+    >
+      <span className="  leading-none overflow-hidden will-change-transform">
         arthur
       </span>
-      <span className="flex items-center justify-between w-[46.7vw]">
+      <span className="flex items-center justify-between w-[70vw] md:w-[46.7vw]">
         <span
-          className="w-[13vw] h-9 bg-main block origin-left"
+          className="w-[20vw] md:w-[13vw] h-3 md:h-9 bg-main block origin-left will-change-transform"
           ref={dash}
         ></span>
-        <span
-          className="title2 text-[17vw] leading-none overflow-hidden"
-          ref={title2}
-        >
+        <span className="title2 leading-none overflow-hidden will-change-transform">
           vera
         </span>
       </span>
