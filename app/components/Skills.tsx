@@ -1,7 +1,4 @@
 const Skills = () => {
-  const date: Date = new Date();
-  const month: string = date.toLocaleString("default", { month: "short" });
-  const year: number = date.getFullYear();
 
   return (
     <div className="px-5 py-20 rounded-t-3xl grid grid-cols-1 bg-dark text-main md:grid-cols-2 gap-5  sticky top-[25%]">

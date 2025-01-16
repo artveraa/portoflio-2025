@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
 
 import Experiences from "@/app/components/Experiences";
 import Profile from "@/app/components/Profile";
