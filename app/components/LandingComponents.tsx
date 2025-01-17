@@ -4,10 +4,12 @@ import AnimatedImages from "@/app/components/AnimatedImages";
 import Presentation from "@/app/components/Presentation";
 import Footer from "@/app/components/Footer";
 import StickySection from "@/app/components/StickySection";
+import Menu from "@/app/components/Menu";
 
 const LandingComponents = () => {
   return (
     <>
+      <Menu />
       <Hero />
       <AnimatedImages />
       <Introduction />

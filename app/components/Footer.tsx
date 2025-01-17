@@ -52,7 +52,7 @@ const Footer = () => {
           <span className="leading-none font-anton uppercase ">arthur</span>
           <div className="button group flex flex-col justify-center items-center w-[30vw] md:w-[15vw] aspect-square bg-main rounded-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] border-8 border-dark hover:scale-110 hover:cursor-pointer transition-transform">
             <span className="text-3xl md:text-5xl group-hover:animate-handShake">
-              👋
+              <Link href={"mailto:contact@arthurvera.fr"}>👋</Link>
             </span>
           </div>
         </div>

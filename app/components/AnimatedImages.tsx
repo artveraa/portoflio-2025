@@ -25,7 +25,7 @@ const AnimatedImages = () => {
   }, [images, image2, image3]);
 
   return (
-    <div className="images-wrapper relative w-full border border-red-500 h-[30vh] flex justify-center items-center ">
+    <div className="images-wrapper relative w-full h-[30vh] flex justify-center items-center ">
       <Image
         src="/arthurvera.jpg"
         alt="Arthur Vera"

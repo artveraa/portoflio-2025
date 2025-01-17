@@ -326,3 +326,46 @@ export const footerAnimation = (
       "<"
     );
 };
+
+// Ouverture menu
+
+export const openMenuAnimation = (
+  overlay: HTMLDivElement,
+  text: HTMLParagraphElement,
+  menuWrapper: HTMLDivElement,
+  buttons: HTMLButtonElement[]
+) => {
+  const tl = gsap.timeline();
+
+  tl.to(overlay, {
+    autoAlpha: 1,
+    duration: 1,
+    ease: "power4.out",
+  })
+    .to(menuWrapper, {
+      x: 0,
+      duration: 0.5,
+      ease: "power4.out",
+    })
+    .to(text, {
+      autoAlpha: 1,
+      duration: 0.5,
+      ease: "power4.out",
+    })
+    .fromTo(
+      buttons,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        ease: "power4.out",
+        stagger: 0.1,
+      }
+    );
+
+  return tl;
+};

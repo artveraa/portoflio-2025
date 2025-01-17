@@ -3,6 +3,7 @@ import { Anton, Instrument_Serif, Inter } from "next/font/google";
 import "@/app/globals.css";
 
 import Header from "@/app/components/Header";
+import { MenuProvider } from "@/app/context/MenuContext";
 
 const anton = Anton({
   variable: "--font-anton",
@@ -37,8 +38,10 @@ export default function RootLayout({
       <body
         className={`${anton.variable} ${instrument.variable} ${inter.variable} antialiased bg-dark text-main`}
       >
-        <Header />
-        {children}
+        <MenuProvider>
+          <Header />
+          {children}
+        </MenuProvider>
       </body>
     </html>
   );
